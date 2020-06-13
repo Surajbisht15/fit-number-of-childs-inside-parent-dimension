@@ -1,3 +1,1 @@
-# fit-divs-according-to-parent-dimension
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/fit-divs-according-to-parent-dimension)
+# Fit any number of childs inside their parent
