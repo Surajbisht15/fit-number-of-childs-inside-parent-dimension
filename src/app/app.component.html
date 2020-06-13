@@ -1,0 +1,13 @@
+<div *ngIf="!widget">
+  <div class="header">Header</div>
+  <div class="main-wrapper">
+    <div class="sidebar"></div>
+    <div #mainDiv class="inner-content">
+      <mat-form-field style="width: 100%; padding: 20px; box-sizing: border-box;">
+      <input type="text" matInput placeholder="Name" [(ngModel)]="name" autocomplete="off">
+      </mat-form-field>
+      <button mat-flat-button [disabled]="!name.length" color="primary" type="button" (click)="OpenModal()" style="margin:0px 20px;">Open Modal</button>
+    </div>
+  </div>
+</div>
+<app-widget *ngIf="widget"></app-widget>

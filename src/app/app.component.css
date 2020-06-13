@@ -1,0 +1,28 @@
+p {
+  font-family: Lato;
+}
+.disable-div {
+  pointer-events: none;
+  background-color: rgba(0,0,0,.6);
+}
+.header {
+  height: 40px;
+  border-bottom: 1px solid #dddddd;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar {
+  width: 100px;
+  background-color: #ddd;
+  height: 100%;
+}
+.main-wrapper {
+  display: flex;
+  height: calc(100vh - 42px);
+}
+.inner-content {
+  height: 100%;
+  flex: 1;
+}

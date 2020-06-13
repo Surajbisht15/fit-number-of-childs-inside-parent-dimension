@@ -1,0 +1,22 @@
+<div class="main-wrapper">
+  <div class="select-wrapper">
+    <mat-form-field appearance="outline" floatLabel ="always" disableOptionCentering>
+      <mat-label>Select Option</mat-label>
+      <mat-select [(ngModel)]="selectedWidgets" (selectionChange)="selectWidget($event)" multiple>
+        <mat-option *ngFor="let widget of widgetData; let i=index" 
+        [value]="widget">
+          {{widget.name}}
+        </mat-option>
+      </mat-select> 
+    </mat-form-field>
+    <div class="action-button">
+      <button mat-raised-button [class.selected]="aspectRatioSelected" (click)="setAspectRatio()" color="primary">Aspect Ratio</button>
+      <button mat-raised-button (click)="fitToScreen()" [class.selected]="!aspectRatioSelected"color="accent">Fit to screen</button>
+    </div>
+  </div>
+  <div class="widget-container">
+    <div *ngFor="let image of imagesPath">
+      <img src="{{image.url}}" [class.fitToScreen]="!aspectRatioSelected">
+    </div>
+  </div>
+</div>
